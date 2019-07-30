@@ -1,8 +1,0 @@
-<% content_for :title, content_item["title"] %>
-  <% content_for :meta_tags do %>
-    <meta name="description" content="<%= content_item["description"] %>">
-<% end %>
-
-<% content_for :breadcrumbs do %>
-  <%= render partial: 'govuk_component/breadcrumbs', locals: navigation.breadcrumbs %>
-<% end %>
