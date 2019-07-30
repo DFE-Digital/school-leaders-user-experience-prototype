@@ -1,16 +1,7 @@
 Rails.application.routes.draw do
+  root to: 'dfe#index'
+
   get "/healthcheck", to: proc { [200, {}, ["OK"]] }
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
-  get '/services/get-a-divorce', to: 'services#divorce'
-  get '/services/end-a-civil-partnership', to: 'services#civilpartnership'
-  get '/services/make-child-arrangements', to: 'services#childarrangements'
-
-  get '/get-a-divorce', to: 'services#divorce'
-  get '/end-a-civil-partnership', to: 'services#civilpartnership'
-
-  get '/services/:base_path', to: 'services#show'
-  get '/services', to: 'services#index'
 
   get '/dfe', to: 'dfe#index'
 
@@ -52,6 +43,6 @@ Rails.application.routes.draw do
   get '/prototype', to: 'welcome#index'
   get '/search', to: 'search#results'
   get '/*base_path', to: 'content_items#fall_through'
-  root to: 'content_items#fall_through'
+
   post '/:base_path', to: redirect('/%{base_path}/camden')
 end
