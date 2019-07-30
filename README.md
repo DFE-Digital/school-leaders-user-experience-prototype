@@ -1,4 +1,4 @@
-# govuk-services-prototype
+# govuk-dfe-prototype
 
 [TODO: Add description]
 
