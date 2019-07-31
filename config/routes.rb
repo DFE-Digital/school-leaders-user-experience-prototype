@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
+  # DfE routes
   root to: 'dfe#index'
-
-  get "/healthcheck", to: proc { [200, {}, ["OK"]] }
 
   get '/dfe', to: 'dfe#index'
 
@@ -34,8 +33,10 @@ Rails.application.routes.draw do
 
   get '/guidance/roll-out-of-the-early-career-framework', to: 'dfe#page_9'
 
-  get "/browse.json" => redirect("/api/content/browse")
+  get "/healthcheck", to: proc { [200, {}, ["OK"]] }
 
+  # Other routes
+  get "/browse.json" => redirect("/api/content/browse")
   resources :browse, only: [:show], param: :top_level_slug do
     get ':second_level_slug', on: :member, to: "second_level_browse_page#show"
   end
