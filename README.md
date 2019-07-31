@@ -1,4 +1,4 @@
-# govuk-dfe-prototype
+# School Leaders User Experience Prototype
 
 A prototype containing DfE's Early Career Framework (ECF) using the [GOV.UK design system](https://design-system.service.gov.uk/) for user research purposes.
 
@@ -30,7 +30,7 @@ This will start the application on <http://localhost:3000> which roots to the EC
 - `app/assets/stylesheets/application.scss` - Imports styles from modules and contains some custom styling.
 - `app/assets/stylesheets/government-frontend/*` - Contains custom styling for ECF content.
 - `app/assets/stylesheets/modules/_publisher-metadata.scss` - Contains custom styling for ECF content.
-
+- `app/assets/images/*` - Contains the images for ECF pages.
 
 ### Deploying to Heroku
 
